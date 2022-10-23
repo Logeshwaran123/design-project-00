@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    transition: 0.4s ease-in-out;
+}
+
+
+/* Header Section */
+header {
+    width: 100vw;
+    height: 100vh;
+    /* background: aqua; */
+}
+
+/* Brand Name */
+#brd_name {
+    font-size: 1.34em;
+}
+
+/* Navigation Section */
+nav {
+    display: flex;
+    align-items: center;
+    padding: 2em 3em;
+    justify-content: space-between;
+    height: 10vh;
+
+    /* Colorizing */
+    background: #EDEDED;
+    color: #E26868;
+}
+
+#nav_panel {
+    display: flex;
+    width: 40vw;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+/* Sign In Btn */
+#sign_in {
+    border: 1px solid #000;
+    background: #000;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+.nav--itm {
+    cursor: pointer;
+    padding: 0.5em 0;
+    transition: 0.3s ease-in-out;
+}
+
+.nav--itm:hover {
+    color: #000;
+}
+
+#sign_in:hover {
+    color: #fff;
+    background: #E26868;
+    border-color: #E26868;
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    /* Property Style */
+    .hidden {
+        display: none !important;
+    }
+
+    #nav_panel {
+        display: block;
+        position: absolute;
+        top: 13vh;
+        left: 64vw;
+        text-align: center;
+        width: 34vw;
+    }
+
+    .nav--itm {
+        padding: 2em 0;
+    }
+
+    /* Mobile Menu */
+    #mbl_menu {
+        width: 35px;
+        cursor: pointer;
+    }
+
+    .line {
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin: 6px 0;
+        background: #E26868;
+        cursor: pointer;
+    }
+
+    .active>.line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .active>.line:nth-child(1) {
+        transform: rotate(45deg) translateY(7px);
+    }
+
+    .active>.line:nth-child(3) {
+        transform: rotate(-45deg) translateY(-14px) translateX(3px);
+    }
+
+}
